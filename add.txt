@@ -1,0 +1,46 @@
+  <header>
+        <nav>
+            <div>
+                <h3>My Website</h3>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#">Prodcts</a></li>
+                    <li><a href="#">Current</a></li>
+                    <li><a href="">Member+</a></li>
+                </ul>
+            </div> 
+            <ul class="menu-member">
+                <?php 
+                    if(isset($_SESSION["userid"]))
+                    { 
+                ?>
+                    <li><a href="#"><?php echo $_SESSION["userid"]; ?></a> </li>
+                    <li><a href="includes/logout.inc.php" class="header-login-a" >LOGIN</li>
+                <?php
+                    }
+                    else
+                    {
+                ?> 
+                    <li><a href="#">SIGN UP</a> </li>
+                    <li><a href="#" class="header-login-a" >LOGIN</li>  
+                <?php     
+                    }
+                ?>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="index-intro">
+        <div class="index-intro-bg">
+            <div class="wrapper">
+                <div class="video"></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis incidunt, provident, eaque ipsa expedita consequuntur dicta necessitatibus esse vitae quidem illum quasi tempora velit rem magni sint ab perferendis corrupti.</p></br>
+            </div>
+            <div>
+                <div class="index-intro-c2">
+                    <h2>Make me<br>Professional<br>gear</h2>
+                    <a href="">Find Our Gear Here</a>
+                </div>
+            </div>
+        </div>
+    </section>
